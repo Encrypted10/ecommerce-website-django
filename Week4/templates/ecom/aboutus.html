@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Arsalan's</title>
+<link rel="icon" type="image/x-icon" href="/static/images/k-removebg.png">
+
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+    body{
+      background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1389ff, #b8f4ed);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #1389ff, #b8f4ed);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-color: #4b7daf;
+}
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <img src="/static/images/passport.jpg" alt="nothing" class="center"    style="width: 100px; height: 100px; text-align: center; ">
+<h4 style="text-align:center; color: black;">"Arsalan's is an online platform that offers a wide range of accessories and fashion products for men, women, and kids. Whether you are looking for a stylish watch, a trendy bag, a cool pair of sunglasses, or a chic scarf, Arsalan's has it all. You can browse through hundreds of products from various brands and categories, and find the perfect match for your outfit and personality. Arsalan's was founded in 2023 by KHAJA MUBASHIR ARSALAN, a young entrepreneur who has a passion for fashion and technology. He wanted to create a one-stop destination for all the accessory lovers in India, and provide them with quality products at affordable prices. He also wanted to make online shopping easy and convenient, with features like fast delivery, secure payment, and hassle-free returns. Arsalan's aims to become the leading online retailer of accessories and fashion products in India, and to delight its customers with its exceptional service and variety. Arsalan's believes that accessories are not just add-ons, but expressions of one's style and identity. That's why Arsalan's invites you to explore its amazing collection and discover your own unique look.
+  Arsalan's is not just an online store, but a community of accessory enthusiasts. You can join the Arsalan's Club, a loyalty program that rewards you with points, discounts, and exclusive offers for every purchase you make. You can also share your feedback, reviews, and photos with other customers, and get inspired by their style and suggestions. Arsalan's is also committed to social responsibility and environmental sustainability. Arsalan's supports local artisans and designers, and promotes their products on its platform. Arsalan's also uses eco-friendly packaging and delivery methods, and donates a portion of its profits to various causes and charities. Arsalan's is more than just a name, it is a philosophy. It means to cross the boundaries of fashion and express yourself with confidence and creativity. It means to be quick in finding and buying the accessories that suit you best. It means to be part of a cross-cultural and cross-generational community that celebrates diversity and individuality. Arsalan's is your ultimate online destination for accessories and fashion products. Visit Arsalan's today and discover the difference." </h4>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : Siva Veludurthi
+-->
+
+</html>
